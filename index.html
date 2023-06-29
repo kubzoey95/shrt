@@ -7,6 +7,6 @@
   document.addEventListener("DOMContentLoaded", function(event) {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    location.assign(mapping[urlParams.keys()[0]]);
+    location.assign(mapping[urlParams.keys().next()]);
   });
 </script>
