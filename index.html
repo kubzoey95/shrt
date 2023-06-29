@@ -1,12 +1,12 @@
 <script>
-  {
-    rtr: "https://play.google.com/store/apps/details?id=com.rtr.rtr",
-    hmr: "https://colab.research.google.com/drive/14Gi8kIiHysby6H7DLNi0Xfkl8YPzlKOe?usp=sharing",
-    cnv: "https://colab.research.google.com/drive/16YU1ZQfzM9TFiR_KwX2qCDUbYQ_7GvAH?usp=sharing"
+  const mapping = {
+    "rtr": "https://play.google.com/store/apps/details?id=com.rtr.rtr",
+    "hmr": "https://colab.research.google.com/drive/14Gi8kIiHysby6H7DLNi0Xfkl8YPzlKOe?usp=sharing",
+    "cnv": "https://colab.research.google.com/drive/16YU1ZQfzM9TFiR_KwX2qCDUbYQ_7GvAH?usp=sharing"
   }
   document.addEventListener("DOMContentLoaded", function(event) {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    location.assign();
+    location.assign(mapping[urlParams.keys()[0]]);
   });
 </script>
