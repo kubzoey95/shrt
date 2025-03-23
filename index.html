@@ -1,3 +1,29 @@
 <html>
-  link shortener
+<head>
+  <script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+      let urls = {
+        "ohif-market": "https://marketplace.visualstudio.com/items?itemName=kubzoey95.ohif-viewer",
+        "ohif-github": "https://github.com/kubzoey95/ohif-viewer-vscode",
+        "bach-generator": "https://kubzoey95.github.io/chorder/",
+        "mobile-game": "https://github.com/kubzoey95/R_TR",
+        "hemor-segm": "https://colab.research.google.com/drive/14Gi8kIiHysby6H7DLNi0Xfkl8YPzlKOe?usp=sharing",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+      }
+      let params = new URLSearchParams(document.location.search);
+      let loc = params.get("loc");
+      if (loc != null) {
+        window.location.href = urls[loc]
+      }
+    })
+  </script>
+</head>
 </html>
